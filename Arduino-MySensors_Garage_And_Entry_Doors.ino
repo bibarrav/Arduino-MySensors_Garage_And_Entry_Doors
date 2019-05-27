@@ -82,7 +82,7 @@ void receive(const MyMessage &message) {
   if (message.type==V_LIGHT) {
      // Change relay state
      digitalWrite(message.sensor-1+RELAY_1, RELAY_ON);
-     wait(200);
+     delay(400);
      digitalWrite(message.sensor-1+RELAY_1, RELAY_OFF);
      // Store state in eeprom
      //saveState(message.sensor, message.getBool());
